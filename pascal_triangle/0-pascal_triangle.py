@@ -6,6 +6,10 @@ You can assume n will be always an integer
 """
 
 def pascal_triangle(n):
+	"""
+	Function that calculates a pascal triangle based on input 'n'
+	"""
+
 	triangulo = []
 
 	if n <= 0:
