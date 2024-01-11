@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-"""
-def pascal_triangle(n): returns a list of lists of integers representing the Pascal’s triangle of n:
-Returns an empty list if n <= 0
-You can assume n will be always an integer
-"""
+""" Module for calculating Pascal Triangle """
 
 def pascal_triangle(n):
 	"""
-	Function that calculates a pascal triangle based on input 'n'
-	"""
+	Function for creating a pascal triangle as a list of lists
+    n: number of rows
+    returns empty list if n <= 0
+    """
 
 	triangulo = []
 
