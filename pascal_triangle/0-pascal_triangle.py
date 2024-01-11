@@ -3,26 +3,21 @@
 
 
 def pascal_triangle(n):
+    """ Function for creating a pascal triangle as a list of lists
+    n: number of rows
+    returns empty list if n <= 0
     """
-    Function for creating a pascal triangle as a list of lists
-        n: number of rows
-        returns empty list if n <= 0
-        """
-
-    triangulo = []
-
     if n <= 0:
-        return triangulo
+        return ([])
 
-    for i in range(n):
-        fila = []
-        for j in range(i + 1):
-            if j == 0 or j == i:
-                fila.append(1)
-            else:
-                coeficiente_binomial = triangulo[i - 1][j - 1] + \
-                    triangulo[i - 1][j]
-                fila.append(coeficiente_binomial)
-                triangulo.append(fila)
+    pascal = [[1]]
+    for i in range(1, n):
+        row = [1]
+        prev = pascal[i - 1]
+        for j in range(len(prev)):
+            new = prev[j] + prev[j + 1] if j != len(prev) - 1 else 1
+            row.append(new)
 
-    return triangulo
+        pascal.append(row)
+
+    return pascal
