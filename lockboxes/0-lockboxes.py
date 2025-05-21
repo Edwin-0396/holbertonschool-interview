@@ -1,3 +1,4 @@
+"""Module for canUnlockAll function to determine if all boxes can be unlocked."""
 #!/usr/bin/python3
 
 def canUnlockAll(boxes):
