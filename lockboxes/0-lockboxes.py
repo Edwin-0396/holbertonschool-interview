@@ -1,5 +1,7 @@
-"""Module for canUnlockAll function to determine if all boxes can be unlocked."""
 #!/usr/bin/python3
+"""Module for canUnlockAll function to determine if all boxes
+can be unlocked."""
+
 
 def canUnlockAll(boxes):
     """
@@ -25,6 +27,7 @@ def canUnlockAll(boxes):
                 keys.update(boxes[i])  # Add new keys found in box i
                 found_new = True  # Found a new box to unlock
     return all(unlocked)  # Return True if all boxes are unlocked
+
 
 if __name__ == "__main__":
     boxes = [[1], [2], [3], [4], []]
